@@ -1,3 +1,4 @@
+import { useSelector, useDispatch } from "react-redux"; 
 import productList from '../data/productList.json'
 import '../styles/cart.scss'
 
