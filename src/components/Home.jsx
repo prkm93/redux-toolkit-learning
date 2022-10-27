@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux"
-// import productList from '../data/productList.json'
 import cartSlice from '../data/cartSlice'
 import productSlice, { fetchAllProducts } from '../data/productSlice'
 import '../styles/home.scss'

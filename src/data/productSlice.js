@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import productList from '../data/productList.json'
 import { defer } from "react-router-dom";
 
 export const fetchAllProducts = createAsyncThunk('fetch-all-products', async (apiUrl) => {
@@ -19,6 +20,7 @@ const productSlice = createSlice({
             state.fetchStatus = 'loading'
         })
         .addCase(fetchAllProducts.rejected, (state) => {
+            state.data = productList.products;
             state.fetchStatus = 'error'
         })
 
